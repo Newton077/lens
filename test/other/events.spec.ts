@@ -522,7 +522,6 @@ makeSuiteCleanRoom('Events', function () {
         collectData,
         await getTimestamp(),
       ]);
-      matchEvent(receipt, 'BaseInitialized', [expectedName, expectedSymbol, await getTimestamp()]);
       matchEvent(receipt, 'CollectNFTInitialized', [FIRST_PROFILE_ID, 1, await getTimestamp()]);
       matchEvent(receipt, 'Transfer', [ZERO_ADDRESS, userTwoAddress, 1], lensHubImpl);
       matchEvent(receipt, 'CollectNFTTransferred', [
@@ -613,7 +612,6 @@ makeSuiteCleanRoom('Events', function () {
         collectData,
         await getTimestamp(),
       ]);
-      matchEvent(receipt, 'BaseInitialized', [expectedName, expectedSymbol, await getTimestamp()]);
       matchEvent(receipt, 'CollectNFTInitialized', [FIRST_PROFILE_ID, 1, await getTimestamp()]);
       matchEvent(receipt, 'Transfer', [ZERO_ADDRESS, userTwoAddress, 1], lensHubImpl);
       matchEvent(receipt, 'CollectNFTTransferred', [
